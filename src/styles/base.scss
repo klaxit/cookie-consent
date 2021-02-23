@@ -1,0 +1,123 @@
+/* Utils */
+
+.cc-hidden {
+  display: none;
+}
+
+.cc-noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.cc-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  z-index: 9998;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  font-family: Helvetica, Calibri, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+
+  opacity: 0;
+  height: 0;
+  transition: opacity 3s ease-in-out;
+
+  &.displayed {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+.cc-box {
+  display: block;
+  margin: 32px;
+  width: 520px;
+  box-shadow: 0px 4px 16px 0 rgba(0,0,0,.16);
+  padding: 32px;
+}
+
+.cc-title {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+.cc-content {
+  padding: 16px 0;
+  min-height: 60px;
+}
+
+.cc-box-buttons {
+  float: right;
+  margin-top: 16px;
+}
+
+.cc-btn {
+  display: inline-block;
+  padding: 10px 12px;
+  margin-left: 12px;
+  cursor: pointer;
+  line-height: 1em;
+}
+
+.cc-btn-transition {
+          transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+}
+
+.cc-btn-settings {
+  &:hover{
+    background: #eee;
+  }
+}
+
+.cc-btn-reject {
+  background: #ccc;
+  color: #000;
+
+  &:hover{
+    background: #aaa;
+  }
+}
+
+.cc-btn-accept {
+  background: #000;
+  color: #fff;
+
+  &:hover{
+    background: #444;
+  }
+}
+
+.cc-categories {
+  float: left;
+  width: 25%;
+  font-size: 1.1em;
+
+  div[role="checkbox"] {
+    width: 100%;
+    margin-left: 8px;
+  }
+
+  span[role="link"] {
+    outline: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0.1em;
+  }
+}
+
+.cc-category-description {
+  float: right;
+  width: 75%;
+}
+

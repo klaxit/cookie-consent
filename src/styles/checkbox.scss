@@ -1,0 +1,53 @@
+/*
+* This document includes material copied from or derived from
+* https://www.w3.org/TR/wai-aria-practices/examples/checkbox/css/checkbox.css
+* Copyright © 2015 W3C® (MIT, ERCIM, Keio, Beihang).
+*
+*/
+
+$checkbox-color: #000;
+$checkbox-check-color: #fff;
+
+.cc-container {
+  [role="checkbox"] {
+    display: inline-block;
+    position: relative;
+    padding-left: 1.4em;
+    cursor: pointer;
+  }
+
+  [role="checkbox"]::before,
+  [role="checkbox"]::after {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translate(-50%, -50%);
+    content: '';
+  }
+
+  [role="checkbox"]::before {
+    width: 14px;
+    height: 14px;
+    border: 2px solid $checkbox-color;
+  }
+
+  [role="checkbox"][aria-checked="mixed"]::before,
+  [role="checkbox"][aria-checked="true"]::before {
+    border-color: $checkbox-color;
+    background: $checkbox-color;
+  }
+
+  [role="checkbox"][aria-checked="mixed"]:active::after,
+  [role="checkbox"][aria-checked="true"]::after {
+    display: block;
+    width: 0.25em;
+    height: 0.4em;
+    border: solid #fff;
+    border-width: 0 0.2em 0.2em 0;
+    transform: translateY(-65%) translateX(-50%) rotate(45deg);
+  }
+
+  [role="checkbox"]:focus {
+    outline: none;
+  }
+}

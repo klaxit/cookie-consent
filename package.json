@@ -1,0 +1,30 @@
+{
+  "name": "cookie-consent",
+  "version": "0.1.0",
+  "description": "A simple dialog to handle cookies consent in compliance with EU regulation and GDPR in particular.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config webpack.config.js --progress --profile"
+  },
+  "keywords": [
+    "cookie",
+    "gdpr",
+    "compliance",
+    "europe"
+  ],
+  "author": "Klaxit",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^5.0.2",
+    "eslint": "^7.20.0",
+    "html-loader": "^2.1.0",
+    "html-webpack-plugin": "^5.2.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.24.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
