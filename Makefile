@@ -7,4 +7,4 @@ install:
 	yarn install
 
 dev:
-	yarn run
+	yarn start

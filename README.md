@@ -1,6 +1,9 @@
 # Cookie Consent
 
 TODO
+
+<img src="https://dfuzd1hyd2y0f.cloudfront.net/sharings/20210224_cookie-consent-demo-image_9f58fc0584e4cd25.jpg" alt="Cookie consent demo image" width="400"/>
+
 ## install
 
 TODO
@@ -26,27 +29,19 @@ console.log(cc.status)              // accepted, rejected
 console.log(cc.acceptedCategories)  // ["essential", "analytics"]
 console.log(cc.acceptedCategory("essential"))
 ```
-### Configuration options
+### Options
 
-Available configurationn options are documented in [src/default_options.js].
+Available configurationn options are documented in [default options](./src/default_options.js).
 
-### Customizing the design
+### Custom design
 
 We won"t integrate custom layouts or themes BUT we will do our best to keep current HTML structure and CSS classes in place. And use semantic versioning to indicate any breaking change. So you can rely on these to build your own !
 
-## Lifecycle hooks
-
-```
-// TODO
-
-```
-
-### Options
-Please see [src/default_options.js]
-
 ### Lifecycle hooks
 
-TODO
+```javascript
+//TODO
+```
 
 ## Contributing
 

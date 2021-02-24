@@ -27,7 +27,7 @@ export default {
   },
 
   cookie: {
-    name: "cookieconsent_status",
+    status_name: "cookie_consent",
     domain: "",
     expiryDays: 365,
     secure: false
