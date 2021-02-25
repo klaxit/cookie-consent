@@ -23,11 +23,11 @@ const cc = new CookieConsent({
 })
 
 cc.on( "accept", () => console.log("Accepted !") )
-cc.on( "deny", () => console.log("Rejected !") )
+cc.on( "reject", () => console.log("Rejected !") )
 
 console.log(cc.status)              // accepted, rejected
 console.log(cc.acceptedCategories)  // ["essential", "analytics"]
-console.log(cc.acceptedCategory("essential"))
+console.log(cc.isAccepted("analytics"))
 ```
 ### Options
 
@@ -35,17 +35,11 @@ Available configurationn options are documented in [default options](./src/defau
 
 ### Custom design
 
-We won"t integrate custom layouts or themes BUT we will do our best to keep current HTML structure and CSS classes in place. And use semantic versioning to indicate any breaking change. So you can rely on these to build your own !
-
-### Lifecycle hooks
-
-```javascript
-//TODO
-```
+We won't integrate custom layouts or themes BUT we will do our best to keep current HTML structure and CSS classes in place. And use semantic versioning to indicate any breaking change. So you can rely on these to build your own !
 
 ## Contributing
 
-We won"t integrate custom layouts ou themes BUT
+We won't integrate custom layouts ou themes BUT
 we will do our best to respect semantic versioning so you can rely on class names and structure to build your own.
 
 An we will then be happy to reference it [here][contributions] :)
@@ -54,3 +48,14 @@ An we will then be happy to reference it [here][contributions] :)
 Please see LICENSE
 
 [contributions](doc/contributions.md)
+
+## TODO
+- Buttons interractions
+- Buttons labels (in options)
+- Possibility to have links in description
+- Responsive design
+- Cookie handling
+- Browsers compatibility tests & matrix
+- NPM packaging
+- Complete README.md
+

@@ -61,7 +61,7 @@ export default class ConsentBox {
 
       categoryElem.addEventListener("click", this._categoryClicked.bind(this))
 
-      if (category.enabled) {
+      if (category.checked) {
         categoryElem.setAttribute("aria-checked", "true")
         this._categoryClicked({target: categoryElem})
       }

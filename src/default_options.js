@@ -1,6 +1,7 @@
 "use strict"
 
 export default {
+  // Title of the
   title: "We use cookies",
 
   description: `Click “Accept” to enable us to use cookies to personalize
@@ -15,7 +16,7 @@ export default {
       description: `Essential cookies are necessary for features which
                     are essential to your use of our site or services,
                     such as account login, authentication, and site security.`,
-      enabled: true,
+      checked: true,
       mandatory: true
 		},
 		analytics: {
@@ -27,9 +28,16 @@ export default {
   },
 
   cookie: {
-    status_name: "cookie_consent",
-    domain: "",
+    // Name of the cookie storing the consent state
+    name: "cookie_consent",
+
+    // If null, will take `location.hostname` by default
+    domain: null,
+
+    // Duration of the consent
     expiryDays: 365,
+
+    // If true, the cookies will only be allowed over https
     secure: false
   }
 }
