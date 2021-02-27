@@ -10,7 +10,4 @@ if (typeof exports !== "undefined") {
   window.CookieConsent = CookieConsent
 }
 
-// TODO : clean this up
-new CookieConsent()
-
 

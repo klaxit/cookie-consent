@@ -8,7 +8,7 @@ export default class CookieConsent {
     this.options = Object.assign(defaultOptions, options)
     this.consentBox = new ConsentBox(this.options)
 
-    window.addEventListener("load", this.open.bind(this))
+    this.open()
   }
   open(){
     this.consentBox.open()

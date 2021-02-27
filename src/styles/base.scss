@@ -14,6 +14,11 @@
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
 /* CONTENT */
 
 .cc-container {
@@ -26,17 +31,17 @@
   display: flex;
   flex-wrap: nowrap;
 
+  height: auto;
+
   font-family: Helvetica, Calibri, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5em;
 
   opacity: 0;
-  height: 0;
-  transition: opacity 3s ease-in-out;
 
   &.displayed {
     opacity: 1;
-    height: auto;
+    animation: fadein 2s;
   }
 }
 

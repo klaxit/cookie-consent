@@ -11,11 +11,13 @@ TODO
 ## Usage
 
 ```javascript
-import CookieConsent from "CookieConsent"
-// or
-const CookieConsent = require( "CookieConsent" )
-// or
+// Classic
 const CookieConsent = window.CookieConsent
+// or (Module)
+import CookieConsent from "CookieConsent"
+// or (Module)
+const CookieConsent = require( "CookieConsent" )
+
 
 const cc = new CookieConsent({
   title: "We love cookies 🍪",
@@ -27,7 +29,6 @@ cc.on( "reject", () => console.log("Rejected !") )
 
 console.log(cc.status)              // accepted, rejected
 console.log(cc.acceptedCategories)  // ["essential", "analytics"]
-console.log(cc.isAccepted("analytics"))
 ```
 ### Options
 
