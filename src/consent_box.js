@@ -2,9 +2,12 @@
 
 import consentBoxHtml from "./consent_box.html"
 import Checkbox from "./checkbox"
+import Observable from "./observable"
 
-export default class ConsentBox {
+export default class ConsentBox extends Observable {
   constructor( options = {} ){
+    super()
+
     this.options = options
     this.categories = this.options.categories
 
@@ -19,6 +22,22 @@ export default class ConsentBox {
 
   close(){
     this.container.classList.remove("displayed");
+  }
+
+  selectedCategories(){
+    const categoriesElem = this._firstByClass("cc-categories")
+    const selectedCategories = []
+
+    for (var catKey in this.categories) {
+      const catElem = categoriesElem.querySelector(
+        "[data-category='" + catKey + "']"
+      )
+      if(catElem.getAttribute("aria-checked") == "true") {
+        selectedCategories.push(catKey)
+      }
+    }
+
+    return selectedCategories
   }
 
   _build(){
@@ -97,7 +116,17 @@ export default class ConsentBox {
       elem.addEventListener("click", _this._toggleSettings.bind(_this))
     })
 
-    // TODO : add accept / deny buttons
+    // Accept buttons
+    this.container.querySelectorAll(".cc-btn-accept")
+                  .forEach(function(elem){
+      elem.addEventListener("click", () => _this.emit("accept"))
+    })
+
+    // Reject buttons
+    this.container.querySelectorAll(".cc-btn-reject")
+                  .forEach(function(elem){
+      elem.addEventListener("click", () => _this.emit("reject"))
+    })
   }
 
   _toggleSettings() {
