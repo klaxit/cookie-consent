@@ -10,7 +10,7 @@ export default class Cookie {
       acceptedCategories: this.acceptedCategories
     })
 
-    var cookieStr = this.cookieOptions.cookieName + "=" + serialized
+    var cookieStr = this.cookieOptions.name + "=" + serialized
 
     const expDate = new Date()
     const expDays = this.cookieOptions.expiryDays
@@ -19,8 +19,11 @@ export default class Cookie {
     cookieStr += "; expires=" + expDate.toUTCString()
 
     cookieStr += "; path=/"
-    cookieStr += (this.cookieOptions.secure ? "; secure" : "")
     cookieStr += (this.cookieOptions.domain ? "; domain=" + this.cookieOptions.domain : "")
+    cookieStr += (this.cookieOptions.secure ? "; secure" : "")
+    cookieStr += (this.cookieOptions.sameSite ? "; SameSite=" +  this.cookieOptions.sameSite : "")
+
+    console.log("cookie string=" + cookieStr)
 
     document.cookie = cookieStr
   }
@@ -28,7 +31,7 @@ export default class Cookie {
   load() {
     const existingConsent = this._getCookie(this.cookieOptions.name)
     if(existingConsent){
-      parsed = JSON.parse(existingConsent)
+      const parsed = JSON.parse(existingConsent)
       this.status = parsed.status
       this.acceptedCategories = parsed.acceptedCategories
     } else {

@@ -117,9 +117,13 @@ export default class ConsentBox extends Observable {
     })
 
     // Accept buttons
-    this.container.querySelectorAll(".cc-btn-accept")
+    this.container.querySelectorAll(".cc-btn-accept-all")
+        .forEach(function(elem){
+      elem.addEventListener("click", () => _this.emit("accept-all"))
+    })
+    this.container.querySelectorAll(".cc-btn-accept-selected")
                   .forEach(function(elem){
-      elem.addEventListener("click", () => _this.emit("accept"))
+      elem.addEventListener("click", () => _this.emit("accept-selected"))
     })
 
     // Reject buttons

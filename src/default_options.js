@@ -38,6 +38,9 @@ export default {
     expiryDays: 365,
 
     // If true, the cookies will only be allowed over https
-    secure: false
+    secure: false,
+
+    // See https://developer.mozilla.org/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+    sameSite: "Lax",
   }
 }

@@ -64,11 +64,9 @@ To keep things as simple as possible, and because there are many ways to handle 
 Please see LICENSE
 
 ## TODO
-- Buttons interractions
 - Buttons labels (in options)
 - Possibility to have links in description
 - Responsive design
-- Cookie handling
 - Browsers compatibility tests & matrix
 - NPM packaging
 - Complete README.md
