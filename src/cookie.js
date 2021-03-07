@@ -10,7 +10,7 @@ export default class Cookie {
       acceptedCategories: this.acceptedCategories
     })
 
-    var cookieStr = this.cookieOptions.name + "=" + serialized
+    let cookieStr = this.cookieOptions.name + "=" + serialized
 
     const expDate = new Date()
     const expDays = this.cookieOptions.expiryDays
@@ -22,8 +22,6 @@ export default class Cookie {
     cookieStr += (this.cookieOptions.domain ? "; domain=" + this.cookieOptions.domain : "")
     cookieStr += (this.cookieOptions.secure ? "; secure" : "")
     cookieStr += (this.cookieOptions.sameSite ? "; SameSite=" +  this.cookieOptions.sameSite : "")
-
-    console.log("cookie string=" + cookieStr)
 
     document.cookie = cookieStr
   }

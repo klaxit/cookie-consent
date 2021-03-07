@@ -4,7 +4,7 @@ const path = require( "path" )
 
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
-var config = {
+const config = {
   mode: "development",
   entry: path.resolve(__dirname, "src", "index.js"),
   output: {
@@ -39,5 +39,5 @@ var config = {
   ],
 }
 
-module.exports = config;
+module.exports = config
 

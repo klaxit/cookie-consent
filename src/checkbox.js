@@ -46,7 +46,7 @@ export default class Checkbox {
   /* EVENT HANDLERS */
 
   handleKeydown(event) {
-    var flag = false;
+    let flag = false;
 
     switch (event.keyCode) {
       case this.keyCode.SPACE:

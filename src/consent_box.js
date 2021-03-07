@@ -28,7 +28,7 @@ export default class ConsentBox extends Observable {
     const categoriesElem = this._firstByClass("cc-categories")
     const selectedCategories = []
 
-    for (var catKey in this.categories) {
+    for (let catKey in this.categories) {
       const catElem = categoriesElem.querySelector(
         "[data-category='" + catKey + "']"
       )
@@ -42,7 +42,7 @@ export default class ConsentBox extends Observable {
 
   _build(){
     // Build container & content
-    var elemBuilder = document.createElement("div")
+    const elemBuilder = document.createElement("div")
     elemBuilder.innerHTML = consentBoxHtml
     this.container = elemBuilder.firstChild
 
@@ -63,21 +63,21 @@ export default class ConsentBox extends Observable {
   }
 
   _buildCategories(){
-    var categoriesElem = this._firstByClass("cc-categories")
+    const categoriesElem = this._firstByClass("cc-categories")
 
-    for (var catKey in this.categories) {
-      var category = this.categories[catKey]
+    for (let catKey in this.categories) {
+      const category = this.categories[catKey]
 
-      var categoryElem = document.createElement("div")
+      const categoryElem = document.createElement("div")
       categoryElem.setAttribute("data-category", catKey)
       categoryElem.setAttribute("role", "checkbox")
       categoryElem.setAttribute("tabindex", "0")
 
-      var categoryLbl = document.createElement("span")
+      const categoryLbl = document.createElement("span")
       categoryLbl.setAttribute("data-category", catKey)
       categoryLbl.setAttribute("role", "link")
       categoryLbl.setAttribute("tabindex", "0")
-      var lblNode = document.createTextNode(category.label)
+      const lblNode = document.createTextNode(category.label)
       categoryLbl.appendChild(lblNode)
 
       categoryElem.appendChild(categoryLbl)
@@ -99,17 +99,17 @@ export default class ConsentBox extends Observable {
   }
 
   _initCheckBoxes() {
-    var checkboxes = this.container.querySelectorAll("[role='checkbox']");
-    for (var i = 0; i < checkboxes.length; i++) {
+    const checkboxes = this.container.querySelectorAll("[role='checkbox']");
+    for (let i = 0; i < checkboxes.length; i++) {
       new Checkbox(checkboxes[i]).init();
     }
   }
 
   _categoryClicked(event) {
-    var targetElement = event.target || event.srcElement;
-    var targetCatKey = targetElement.dataset.category
+    const targetElement = event.target || event.srcElement;
+    const targetCatKey = targetElement.dataset.category
 
-    var descElem = this._firstByClass("cc-category-description")
+    const descElem = this._firstByClass("cc-category-description")
     descElem.innerHTML = this.categories[targetCatKey].description
   }
 
@@ -138,8 +138,8 @@ export default class ConsentBox extends Observable {
   }
 
   _toggleSettings() {
-    var landingClassList = this._firstByClass("cc-section-landing").classList;
-    var settingsClassList = this._firstByClass("cc-section-settings").classList;
+    const landingClassList = this._firstByClass("cc-section-landing").classList;
+    const settingsClassList = this._firstByClass("cc-section-settings").classList;
 
     if(landingClassList.contains("cc-hidden")) {
       landingClassList.remove("cc-hidden")
@@ -156,7 +156,7 @@ export default class ConsentBox extends Observable {
   }
 
   _allByClass(className){
-    var elems = this.container.getElementsByClassName(className)
+    const elems = this.container.getElementsByClassName(className)
     if (elems.length > 0) { return elems }
 
     throw "Cannot find elements for class " + className + ".";
