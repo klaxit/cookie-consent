@@ -34,7 +34,8 @@ const config = {
   },
   plugins: [new HtmlWebpackPlugin({
       hash: true,
-      filename: path.resolve(__dirname, "dist", "index.html")
+      filename: path.resolve(__dirname, "dist", "index.html"),
+      template: path.resolve(__dirname, "examples", "index.ejs")
     })
   ],
 }
