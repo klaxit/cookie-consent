@@ -1,4 +1,4 @@
-/* Utils */
+/* UTILS */
 
 .cc-hidden {
   display: none;
@@ -47,15 +47,16 @@
 
 .cc-box {
   display: block;
-  margin: 32px;
+  margin: 16px;
   width: 520px;
   box-shadow: 0px 4px 16px 0 rgba(0,0,0,.16);
-  padding: 32px;
+  padding: 16px;
 }
 
 .cc-title {
   font-size: 1.8em;
   font-weight: 400;
+  padding: 16px 0 4px 0;
 }
 
 .cc-content {
@@ -126,3 +127,19 @@
   width: 75%;
 }
 
+/* MEDIA */
+
+@media(max-width: 600px) {
+  .cc-box {
+    width: auto;
+  }
+  .cc-categories {
+    float: none;
+    width: 100%;
+  }
+  .cc-category-description {
+    float: none;
+    width: 100%;
+    margin-top: 16px;
+  }
+}

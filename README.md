@@ -64,8 +64,6 @@ To keep things as simple as possible, and because there are many ways to handle 
 Please see LICENSE
 
 ## TODO
-- Buttons labels (in options)
-- Possibility to have links in description
 - Responsive design
 - Browsers compatibility tests & matrix
 - NPM packaging
