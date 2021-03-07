@@ -13,30 +13,28 @@ export default class CookieConsent extends Observable {
     this.consentBox = new ConsentBox(this.options)
     this.cookie = new Cookie(this.options.cookie)
 
-    const _this = this
-
-    this.consentBox.on("accept-all", function(){
-      _this.consentBox.close()
-      _this.cookie.status = "accepted"
-      _this.cookie.acceptedCategories = Object.keys(_this.options.categories)
-      _this.cookie.dump()
-      _this.emit("accept")
+    this.consentBox.on("accept-all", () => {
+      this.consentBox.close()
+      this.cookie.status = "accepted"
+      this.cookie.acceptedCategories = Object.keys(this.options.categories)
+      this.cookie.dump()
+      this.emit("accept")
     })
 
-    this.consentBox.on("accept-selected", function(){
-      _this.consentBox.close()
-      _this.cookie.status = "accepted"
-      _this.cookie.acceptedCategories = _this.consentBox.selectedCategories()
-      _this.cookie.dump()
-      _this.emit("accept")
+    this.consentBox.on("accept-selected", () => {
+      this.consentBox.close()
+      this.cookie.status = "accepted"
+      this.cookie.acceptedCategories = this.consentBox.selectedCategories()
+      this.cookie.dump()
+      this.emit("accept")
     })
 
-    this.consentBox.on("reject", function(){
-      _this.consentBox.close()
-      _this.cookie.status = "rejected"
-      _this.cookie.acceptedCategories = []
-      _this.cookie.dump()
-      _this.emit("reject")
+    this.consentBox.on("reject", () => {
+      this.consentBox.close()
+      this.cookie.status = "rejected"
+      this.cookie.acceptedCategories = []
+      this.cookie.dump()
+      this.emit("reject")
     })
 
     if(!this.cookie.status) {

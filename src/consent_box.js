@@ -114,28 +114,26 @@ export default class ConsentBox extends Observable {
   }
 
   _setupButtons() {
-    var _this = this;
-
     // Settings buttons
     this.container.querySelectorAll(".cc-btn-settings")
-                  .forEach(function(elem){
-      elem.addEventListener("click", _this._toggleSettings.bind(_this))
+                  .forEach((elem) => {
+      elem.addEventListener("click", this._toggleSettings.bind(this))
     })
 
     // Accept buttons
     this.container.querySelectorAll(".cc-btn-accept-all")
-        .forEach(function(elem){
-      elem.addEventListener("click", () => _this.emit("accept-all"))
+        .forEach((elem) => {
+      elem.addEventListener("click", () => this.emit("accept-all"))
     })
     this.container.querySelectorAll(".cc-btn-accept-selected")
-                  .forEach(function(elem){
-      elem.addEventListener("click", () => _this.emit("accept-selected"))
+                  .forEach((elem) => {
+      elem.addEventListener("click", () => this.emit("accept-selected"))
     })
 
     // Reject buttons
     this.container.querySelectorAll(".cc-btn-reject")
-                  .forEach(function(elem){
-      elem.addEventListener("click", () => _this.emit("reject"))
+                  .forEach((elem) => {
+      elem.addEventListener("click", () => this.emit("reject"))
     })
   }
 
