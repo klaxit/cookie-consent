@@ -10,6 +10,14 @@ export default {
                 to use cookies for this purpose. Learn more in our
                 <a href="/cookies">Cookie Notice</a>.`,
 
+  buttons: {
+    acceptAll: "Accept",
+    acceptSelected: "Accept Cookies",
+    reject: "Reject",
+    showSettings: "Cookies settings",
+    hideSettings: "Hide",
+  },
+
   categories: {
     essentials: {
 			label: "Essential",

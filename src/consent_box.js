@@ -46,11 +46,17 @@ export default class ConsentBox extends Observable {
     elemBuilder.innerHTML = consentBoxHtml
     this.container = elemBuilder.firstChild
 
-    var titleNode = document.createTextNode(this.options.title)
-    this._firstByClass("cc-title").appendChild(titleNode);
+    this._firstByClass("cc-title").innerHTML = this.options.title;
+    this._firstByClass("cc-description").innerHTML = this.options.description;
+    this._firstByClass("cc-btn-accept-all").innerHTML = this.options.buttons.acceptAll;
+    this._firstByClass("cc-btn-accept-selected").innerHTML = this.options.buttons.acceptSelected;
+    this._firstByClass("cc-btn-show-settings").innerHTML = this.options.buttons.showSettings;
+    this._firstByClass("cc-btn-hide-settings").innerHTML = this.options.buttons.hideSettings;
 
-    var descriptionNode = document.createTextNode(this.options.description)
-    this._firstByClass("cc-description").appendChild(descriptionNode);
+    const rejectBtns = this._allByClass("cc-btn-reject")
+    for(let i=0; i < rejectBtns.length; i++){
+      rejectBtns[i].innerHTML = this.options.buttons.reject;
+    }
 
     this._buildCategories()
     this._setupButtons()
@@ -134,8 +140,6 @@ export default class ConsentBox extends Observable {
   }
 
   _toggleSettings() {
-    console.log("toggle")
-
     var landingClassList = this._firstByClass("cc-section-landing").classList;
     var settingsClassList = this._firstByClass("cc-section-settings").classList;
 
