@@ -1,3 +1,4 @@
+"use strict"
 export default class Cookie {
   constructor(cookieOptions) {
     this.cookieOptions = cookieOptions

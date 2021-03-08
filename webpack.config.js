@@ -4,6 +4,7 @@ const path = require( "path" )
 
 const config = {
   entry: path.resolve(__dirname, "src", "index.js"),
+  target: ["web", "es5"],
   module: {
       rules: [
           {
@@ -16,6 +17,14 @@ const config = {
             }],
           },
           {
+            test: /\.js?$/,
+            exclude: /node_modules/,
+            loader: "babel-loader",
+            options: {
+              root: __dirname
+            }
+          },
+          {
             test: /\.scss?$/,
             use : [
               "style-loader", // creates style nodes from JS strings
@@ -24,7 +33,7 @@ const config = {
             ]
           }
       ],
-  },
+  }
 }
 
 module.exports = config
