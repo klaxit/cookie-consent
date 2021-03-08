@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --config webpack.config.js --progress --profile"
+    "start": "webpack serve --config webpack.dev.js --progress --profile",
+    "build": "npx webpack --config webpack.prod.js"
   },
   "keywords": [
     "cookie",
@@ -16,6 +17,7 @@
   "author": "Klaxit",
   "license": "MIT",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.2",
     "eslint": "^7.20.0",
     "html-loader": "^2.1.0",
