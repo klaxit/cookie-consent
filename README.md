@@ -20,7 +20,7 @@ TODO
 
   // Initialize the popup and open it
   const cc = new CookieConsent({
-    title: "We love cookies 🍪",
+    title: "We use cookies 🍪",
     // ... other options
   })
 
@@ -59,6 +59,26 @@ To keep things as simple as possible, and because there are many ways to handle 
     // ...
   })
 ```
+
+## Compatibility
+
+We do our best to support these configurations.
+
+### Browsers
+
+| DEVICE  | BROWSER          | VERSIONS |
+| ------- | ---------------- | -------- |
+| DESKTOP | Chrome           | N / N-1  |
+| DESKTOP | Safari           | N / N-1  |
+| DESKTOP | Firefox          | N / N-1  |
+| DESKTOP | MS Edge          | N / N-1  |
+| DESKTOP | Samsung internet | N / N-1  |
+| DESKTOP | Opera            | N / N-1  |
+| DESKTOP | IE               | 11       |
+
+### Definitions
+
+Minimum supported definition is **320 x 568**.
 
 ## License
 Please see LICENSE
