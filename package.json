@@ -1,7 +1,7 @@
 {
-  "name": "cookie-consent",
+  "name": "@klaxit/cookie-consent",
   "version": "0.1.0",
-  "description": "A simple dialog to handle cookies consent in compliance with EU regulation and GDPR in particular.",
+  "description": "A simple dialog to handle cookie consent and comply with data privacy laws. Fully compliant with European GDPR & California CCPA.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,9 +10,11 @@
   },
   "keywords": [
     "cookie",
-    "gdpr",
-    "compliance",
-    "europe"
+    "privacy",
+    "Europe",
+    "GDPR",
+    "California",
+    "CCPA"
   ],
   "author": "Klaxit",
   "license": "MIT",
@@ -36,5 +38,13 @@
   },
   "dependencies": {
     "core-js": "^3.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klaxit/cookie-consent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/klaxit/cookie-consent/issues"
+  },
+  "homepage": "https://github.com/klaxit/cookie-consent#readme"
 }

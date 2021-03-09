@@ -84,7 +84,6 @@ Minimum supported definition is **320 x 568**.
 Please see LICENSE
 
 ## TODO
-- Browsers compatibility tests & matrix
 - NPM packaging
 - Complete README.md
 
