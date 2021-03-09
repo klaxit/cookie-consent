@@ -1,12 +1,12 @@
+[![MIT License][mit-badge]](LICENSE)
+
 # Cookie Consent
 
-TODO
+A lightweight JavaScript plugin to handle cookie consent.
 
-<img src="https://dfuzd1hyd2y0f.cloudfront.net/sharings/20210224_cookie-consent-demo-image_9f58fc0584e4cd25.jpg" alt="Cookie consent demo image" width="400"/>
+It is designed to help you comply with data privacy laws like [EU Cookie Law][eu-cookie-law], [European GDPR][gdpr] or [California CCPA][ccpa].
 
-## install
-
-TODO
+<img src="https://dfuzd1hyd2y0f.cloudfront.net/sharings/20210309_cookie-consent-screen_256ec5e97eaa3142.jpg" alt="Cookie consent demo image" width="400"/>
 
 ## Usage
 
@@ -37,14 +37,15 @@ TODO
 ```
 ### Options
 
-Available configurationn options are documented in [default options](./src/default_options.js).
+Available configuration options are documented in [default options](./src/default_options.js).
 
 ### Custom design
 
 We won't integrate custom themes BUT
+
 we will do our best to keep current HTML structure and CSS classes in place. And use semantic versioning to indicate any breaking change. So you can rely on these to build your own !
 
-### What about internationalization (i18n) ?
+### Internationalization (i18n) ?
 
 To keep things as simple as possible, and because there are many ways to handle i18n, we didn't provide built-in i18n capabilities. But you can easily support multiple languages by doing something like this :
 
@@ -81,9 +82,10 @@ We do our best to support these configurations.
 Minimum supported definition is **320 x 568**.
 
 ## License
-Please see LICENSE
+Please see [LICENSE](LICENSE)
 
-## TODO
-- NPM packaging
-- Complete README.md
+[mit-badge]: https://img.shields.io/badge/license-MIT-brightgreen.svg
+[eu-cookie-law]: https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:337:0011:0036:En:PDF
+[gdpr]: https://gdpr.eu/
+[ccpa]: https://oag.ca.gov/privacy/ccpa
 
