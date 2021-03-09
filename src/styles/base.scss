@@ -21,6 +21,8 @@
 
 /* CONTENT */
 
+$main-color: #3C465B;
+
 .cc-container {
   position: fixed;
   right: 0;
@@ -36,12 +38,17 @@
   font-family: Helvetica, Calibri, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5em;
+  color: $main-color;
 
   opacity: 0;
 
   &.displayed {
     opacity: 1;
     animation: fadein 2s;
+  }
+
+  a {
+    color: inherit;
   }
 }
 
@@ -83,25 +90,25 @@
 
 .cc-btn-settings {
   &:hover{
-    background: #eee;
+    background: #E9EBF0;
   }
 }
 
 .cc-btn-reject {
-  background: #ccc;
+  background: #C8CDD8;
   color: #000;
 
   &:hover{
-    background: #aaa;
+    background: #DADFE9;
   }
 }
 
 .cc-btn-accept {
-  background: #000;
+  background: $main-color;
   color: #fff;
 
   &:hover{
-    background: #444;
+    background: #646E81;
   }
 }
 
@@ -112,12 +119,13 @@
 
   div[role="checkbox"] {
     width: 100%;
+    margin-top: 4px;
     margin-left: 8px;
   }
 
   span[role="link"] {
     outline: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid $main-color;
     padding-bottom: 0.1em;
   }
 }
