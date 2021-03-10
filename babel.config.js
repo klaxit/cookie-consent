@@ -8,7 +8,6 @@ module.exports = function (api) {
           {
               "corejs": { "version":3 },
               "useBuiltIns": "usage",
-              "loose": true,
               "targets": {
                 "browsers": ["last 2 versions", "ie >= 11"]
               }
