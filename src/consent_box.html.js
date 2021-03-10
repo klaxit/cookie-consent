@@ -1,3 +1,4 @@
+export default `
 <div class="cc-container cc-noselect">
   <div class="cc-box">
     <div class="cc-title">
@@ -42,3 +43,4 @@
     </div>
   </div>
 </div>
+`.trim()

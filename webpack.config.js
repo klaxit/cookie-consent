@@ -8,21 +8,12 @@ const config = {
   module: {
       rules: [
           {
-            test: /\.html$/,
-            use: [{
-              loader: "html-loader",
-              options: {
-                minimize: true,
-              }
-            }],
-          },
-          {
             test: /\.js?$/,
-            exclude: /node_modules/,
             loader: "babel-loader",
             options: {
               root: __dirname
-            }
+            },
+            exclude: /node_modules/,
           },
           {
             test: /\.scss?$/,
