@@ -3,4 +3,5 @@ node_modules/
 .vscode
 vscode.code-workspace
 .DS_Store
+package-lock.json
 
