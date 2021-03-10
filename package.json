@@ -5,8 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --config webpack.dev.js --progress --profile",
-    "build": "npx webpack --config webpack.prod.js"
+    "start": "webpack serve --config webpack.dev.js --progress --profile"
   },
   "keywords": [
     "cookie",

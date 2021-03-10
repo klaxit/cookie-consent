@@ -11,12 +11,10 @@ It is designed to help you comply with data privacy laws like [EU Cookie Law][eu
 ## Usage
 
 ```javascript
-  // Classic
+  // Module
+  import CookieConsent from "@klaxit/cookie-consent"
+  // or (Classic)
   const CookieConsent = window.CookieConsent
-  // or (Module)
-  import CookieConsent from "CookieConsent"
-  // or (Module)
-  const CookieConsent = require( "CookieConsent" )
 
   // Initialize the popup and open it
   const cc = new CookieConsent({
