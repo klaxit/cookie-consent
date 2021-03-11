@@ -6,7 +6,7 @@ A lightweight JavaScript plugin to handle cookie consent.
 
 It is designed to help you comply with data privacy laws like [EU Cookie Law][eu-cookie-law], [European GDPR][gdpr] or [California CCPA][ccpa].
 
-<img src="https://dfuzd1hyd2y0f.cloudfront.net/sharings/20210309_cookie-consent-screen_256ec5e97eaa3142.jpg" alt="Cookie consent demo image" width="400"/>
+<img src="examples/demo.gif" alt="Cookie consent demo image" width="540"/>
 
 ## Usage
 
