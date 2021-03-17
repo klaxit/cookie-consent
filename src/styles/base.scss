@@ -30,7 +30,6 @@ $main-color: #3C465B;
 
   z-index: 9998;
 
-  display: flex;
   flex-wrap: nowrap;
 
   height: auto;
@@ -41,9 +40,11 @@ $main-color: #3C465B;
   color: $main-color;
 
   opacity: 0;
+  display: none;
 
   &.displayed {
     opacity: 1;
+    display: flex;
     animation: fadein 2s;
   }
 
