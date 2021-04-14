@@ -3,9 +3,10 @@
 import EventEmitter from "events"
 
 export default class Observable {
-  constructor() {
-    const emitter = new EventEmitter()
-    this.on = emitter.on.bind( emitter )
-    this.emit = emitter.emit.bind( emitter )
+  constructor(emitter = null) {
+    this._emitter = emitter || new EventEmitter()
   }
+
+  on() { this._emitter.on.apply(this._emitter, arguments)}
+  emit() { this._emitter.emit.apply(this._emitter, arguments)}
 }

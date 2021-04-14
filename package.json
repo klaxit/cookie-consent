@@ -1,11 +1,12 @@
 {
   "name": "@klaxit/cookie-consent",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "A simple dialog to handle cookie consent and comply with data privacy laws. Fully compliant with European GDPR & California CCPA.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --config webpack.dev.js --progress --profile"
+    "start": "webpack serve --config webpack.dev.js --progress --profile",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [
     "cookie",
@@ -19,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.13.8",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-transform-runtime": "^7.13.9",
     "@babel/preset-env": "^7.13.9",
     "@babel/runtime": "^7.13.9",

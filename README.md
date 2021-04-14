@@ -8,6 +8,26 @@ It is designed to help you comply with data privacy laws like [EU Cookie Law][eu
 
 <img src="examples/demo.gif" alt="Cookie consent demo image" width="540"/>
 
+## Installation
+
+```bash
+npm install @klaxit/cookie-consent
+```
+
+or
+
+```bash
+yarn add @klaxit/cookie-consent
+```
+
+or
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@klaxit/cookie-consent@0.3.1/dist/cookie-consent.js"></script>
+```
+
+<sub>**NOTE:** the latter isn't advised if you want to have one build for all your libraries. Mostly great for tests</sub>
+
 ## Usage
 
 ```javascript
@@ -23,19 +43,33 @@ It is designed to help you comply with data privacy laws like [EU Cookie Law][eu
   })
 
   // Events
-  cc.on( "accept", () => console.log("Accepted !") )
-  cc.on( "reject", () => console.log("Rejected !") )
+  cc.on("accept", (cc /* your CookieConsent instance */) => console.log("Accepted !"))
+  cc.on("reject", (cc) => console.log("Rejected !"))
+  cc.on("change", (cc) => console.log("Any change !"))
+  // All events can also be binded to `CookieConsent`.
+
 
   // Main accessors
   console.log(cc.status)              // accepted, rejected
   console.log(cc.acceptedCategories)  // ["essential", "analytics"]
+  // also available under `CookieConsent`
 
   // Re-open the popup to allow user to change its consent
   cc.open()
+  // also available under `CookieConsent` once initialized
 ```
 ### Options
 
 Available configuration options are documented in [default options](./src/default_options.js).
+
+### Integration with trackers
+
+You can see an example integration with Google Analytics in [examples/index.ejs](./examples/index.ejs).
+If you want to try further, `git clone git@github.com:klaxit/cookie-consent && yarn && yarn start` will
+run this example.
+
+By using the interface described [above](#usage), you should be able to load scripts on demand depending
+on the three given events.
 
 ### Custom design
 
@@ -86,4 +120,3 @@ Please see [LICENSE](LICENSE)
 [eu-cookie-law]: https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:337:0011:0036:En:PDF
 [gdpr]: https://gdpr.eu/
 [ccpa]: https://oag.ca.gov/privacy/ccpa
-

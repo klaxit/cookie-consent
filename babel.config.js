@@ -6,7 +6,7 @@ module.exports = function (api) {
       [
           "@babel/preset-env",
           {
-              "corejs": { "version":3 },
+              "corejs": { "version": 3 },
               "useBuiltIns": "usage",
               "targets": {
                 "browsers": ["last 2 versions", "ie >= 11"]
@@ -15,7 +15,8 @@ module.exports = function (api) {
       ]
   ]
   const plugins = [
-    "@babel/transform-runtime"
+    "@babel/transform-runtime",
+    "@babel/plugin-proposal-class-properties"
   ]
   return {
       presets,
