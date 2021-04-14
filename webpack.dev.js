@@ -9,7 +9,9 @@ module.exports = Object.assign({}, common, {
     mode: "development",
     plugins: [new HtmlWebpackPlugin({
         hash: true,
-        template: path.resolve(__dirname, "examples", "index.ejs")
+        template: path.resolve(__dirname, "examples", "index.ejs"),
+        scriptLoading: "blocking",
+        inject: false
       })
     ],
   })

@@ -1,5 +1,8 @@
 "use strict"
 export default class Cookie {
+  static DEFAULT_STATUS = null
+  static DEFAULT_ACCEPTED_CATEGORIES = []
+
   constructor(cookieOptions) {
     this.cookieOptions = cookieOptions
     this.load()
@@ -34,8 +37,8 @@ export default class Cookie {
       this.status = parsed.status
       this.acceptedCategories = parsed.acceptedCategories
     } else {
-      this.status =  null
-      this.acceptedCategories = []
+      this.status =  Cookie.DEFAULT_STATUS
+      this.acceptedCategories = Cookie.DEFAULT_ACCEPTED_CATEGORIES
     }
   }
 

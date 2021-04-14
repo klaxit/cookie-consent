@@ -1,9 +1,9 @@
 /*
-* This document includes material copied from or derived from
-* https://www.w3.org/TR/wai-aria-practices/examples/checkbox/checkbox-1/js/checkbox.js
-* Copyright © 2015 W3C® (MIT, ERCIM, Keio, Beihang).
-*
-*/
+ * This document includes material copied from or derived from
+ * https://www.w3.org/TR/wai-aria-practices/examples/checkbox/checkbox-1/js/checkbox.js
+ * Copyright © 2015 W3C® (MIT, ERCIM, Keio, Beihang).
+ *
+ */
 
 export default class Checkbox {
 
@@ -76,9 +76,3 @@ export default class Checkbox {
     this.domNode.classList.remove("focus");
   }
 }
-
-
-
-
-
-
