@@ -23,7 +23,7 @@ yarn add @klaxit/cookie-consent
 or
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@klaxit/cookie-consent@0.3.1/dist/cookie-consent.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@klaxit/cookie-consent@X.Y.Z/dist/cookie-consent.js"></script>
 ```
 
 <sub>**NOTE:** the latter isn't advised if you want to have one build for all your libraries. Mostly great for tests</sub>
