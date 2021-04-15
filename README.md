@@ -26,7 +26,7 @@ or
 <script src="https://cdn.jsdelivr.net/npm/@klaxit/cookie-consent@X.Y.Z/dist/cookie-consent.js"></script>
 ```
 
-<sub>**NOTE:** the latter isn't advised if you want to have one build for all your libraries. Mostly great for tests</sub>
+<sub>**NOTE:** the latter isn't advised if you want to have one build for all your libraries. Mostly great for tests. And don't forget to replace X.Y.Z with current package version!</sub>
 
 ## Usage
 
