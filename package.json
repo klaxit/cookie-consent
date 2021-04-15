@@ -1,12 +1,13 @@
 {
   "name": "@klaxit/cookie-consent",
-  "version": "0.3.1",
+  "version": "0.3.0",
   "description": "A simple dialog to handle cookie consent and comply with data privacy laws. Fully compliant with European GDPR & California CCPA.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --config webpack.dev.js --progress --profile",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "cookie",
