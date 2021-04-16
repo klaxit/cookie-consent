@@ -7,13 +7,12 @@ import ConsentBox from "./consent_box"
 import Cookie from "./cookie"
 import Observable from "./observable"
 
-export default class CookieConsent extends Observable {
-  // There is only one event source which is shared between
-  // instance and class
-  static _emitter = new EventEmitter()
-  static on = this._emitter.on.bind(this._emitter)
-  static emit = this._emitter.emit.bind(this._emitter)
+// There is only one event source which is shared between
+// instance and class. Emit is only accesible at the instance
+// level however.
+const SharedEmitter = new EventEmitter()
 
+export default class CookieConsent extends Observable {
   constructor( options = {} ){
     // Since there must only be one instance (one consent box),
     // we will indicate user that it is not OK to create many
@@ -68,12 +67,6 @@ export default class CookieConsent extends Observable {
     this._consentBox.open()
   }
 
-  static open () {
-    if (!this._instance) throw("You must initialize a CookieConsent instance before opening.")
-
-    this._instance.open()
-  }
-
   emit (event) {
     super.emit(event, this)
   }
@@ -82,15 +75,28 @@ export default class CookieConsent extends Observable {
     return this._cookie.status
   }
 
-  static get status () {
-    return this._instance?.status || Cookie.DEFAULT_STATUS
-  }
-
   get acceptedCategories () {
     return this._cookie.acceptedCategories
   }
-
-  static get acceptedCategories () {
-    return this._instance?.acceptedCategories || Cookie.DEFAULT_ACCEPTED_CATEGORIES
-  }
 }
+
+// Static level properties, since class level static properties are still a
+// proposal, we use Object.defineProperties.
+Object.defineProperties(CookieConsent, {
+  open: {
+    value() {
+      if (!this._instance) throw new Error("You must initialize a CookieConsent instance before opening.")
+
+      this._instance.open()
+    }
+  },
+  status: {
+    get() { return this._instance?.status || Cookie.DEFAULT_STATUS }
+  },
+  acceptedCategories: {
+    get() { return this._instance?.acceptedCategories || Cookie.DEFAULT_ACCEPTED_CATEGORIES }
+  },
+  on: {
+    value: SharedEmitter.on.bind(SharedEmitter)
+  }
+})
