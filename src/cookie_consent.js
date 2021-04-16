@@ -43,7 +43,7 @@ export default class CookieConsent extends Observable {
     this._consentBox.on("accept-selected", () => {
       this._consentBox.close()
       this._cookie.status = "accepted"
-      this._cookie.acceptedCategories = this.consentBox.selectedCategories()
+      this._cookie.acceptedCategories = this._consentBox.selectedCategories()
       this._cookie.dump()
       this.emit("accept")
       this.emit("change")
