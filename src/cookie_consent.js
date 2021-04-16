@@ -91,10 +91,10 @@ Object.defineProperties(CookieConsent, {
     }
   },
   status: {
-    get() { return this._instance?.status || Cookie.DEFAULT_STATUS }
+    get() { return this._instance ? this._instance.status : Cookie.DEFAULT_STATUS }
   },
   acceptedCategories: {
-    get() { return this._instance?.acceptedCategories || Cookie.DEFAULT_ACCEPTED_CATEGORIES }
+    get() { return this._instance ? this._instance.acceptedCategories : Cookie.DEFAULT_ACCEPTED_CATEGORIES }
   },
   on: {
     value: SharedEmitter.on.bind(SharedEmitter)
