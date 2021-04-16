@@ -1,6 +1,6 @@
 {
   "name": "@klaxit/cookie-consent",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A simple dialog to handle cookie consent and comply with data privacy laws. Fully compliant with European GDPR & California CCPA.",
   "main": "src/index.js",
   "scripts": {
