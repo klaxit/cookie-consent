@@ -33,6 +33,7 @@ $main-color: #3C465B;
   flex-wrap: nowrap;
 
   height: auto;
+  width: 552px; /* .cc-box width + margin */
 
   font-family: Helvetica, Calibri, Arial, sans-serif;
   font-size: 14px;
@@ -140,6 +141,9 @@ $main-color: #3C465B;
 /* MEDIA */
 
 @media(max-width: 600px) {
+  .cc-container {
+    width: auto;
+  }
   .cc-box {
     width: auto;
   }
